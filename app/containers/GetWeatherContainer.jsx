@@ -4,6 +4,10 @@ var GetWeatherComponent = require('../components/GetWeatherComponent.jsx');
 
 var GetWeatherContainer = React.createClass({
 
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
 	getInitialState: function() {
 		return {
 			cityState: ''
@@ -19,7 +23,7 @@ var GetWeatherContainer = React.createClass({
 	handleSubmitLocation: function (event) {
 		event.preventDefault();
 		const cityState = this.state.cityState;
-		// TODO
+		this.context.router.push(`/weather/${cityState}`);
 	},
 
 	render: function() {

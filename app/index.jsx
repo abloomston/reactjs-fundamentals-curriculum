@@ -10,11 +10,13 @@ var history = ReactRouter.hashHistory;
 
 var Main = require('./components/Main.jsx');
 var Home = require('./components/Home.jsx');
+var ShowWeatherContainer = require('./containers/ShowWeatherContainer.jsx');
 
 var Routes = props => (
 	<Router history={history}>
 		<Route path='/' component={Main}>
-			<IndexRoute component={Home}/>
+		  <IndexRoute component={Home}/>
+      <Route path='/weather/:cityState' component={ShowWeatherContainer}/>
 		</Route>
 	</Router>
 );
