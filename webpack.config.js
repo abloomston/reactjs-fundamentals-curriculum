@@ -1,0 +1,26 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: __dirname + '/app/index.html',
+  filename: 'index.html',
+  inject: 'body'
+});
+var webpack = require('webpack');
+var OpenWeatherMapPlugin = new webpack.DefinePlugin({
+  OPEN_WEATHER_API_KEY: JSON.stringify(process.env.OPEN_WEATHER_API_KEY || 'OPEN_WEATHER_API_KEY')
+});
+module.exports = {
+  entry: [
+    './app/index.jsx'
+  ],
+  module: {
+    loaders: [
+      {test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader"},
+      {test: /\.css$/, loader: "style-loader!css-loader"}
+    ]
+  },
+  output: {
+    filename: "index.js",
+    path: __dirname + '/dist'
+  },
+  plugins: [HTMLWebpackPluginConfig, OpenWeatherMapPlugin]
+};
