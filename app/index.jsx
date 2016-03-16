@@ -8,8 +8,14 @@ var IndexRoute = ReactRouter.IndexRoute;
 
 var history = ReactRouter.hashHistory;
 
+var Main = require('./components/Main.jsx');
+var Home = require('./components/Home.jsx');
+
 var Routes = props => (
 	<Router history={history}>
+		<Route path='/' component={Main}>
+			<IndexRoute component={Home}/>
+		</Route>
 	</Router>
 );
 
