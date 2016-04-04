@@ -20,7 +20,7 @@ var WeatherDataDay = props => (
 
 var WeatherData = props => (
   <div>
-    <h3>{props.weatherData.city.name}, {props.weatherData.city.country}</h3>
+    <h3>{props.cityState}</h3>
     <ul>
       {props.weatherData.list.map(data => <li key={data.dt}><WeatherDataDay data={data}/></li>)}
     </ul>
@@ -33,7 +33,7 @@ WeatherData.propTypes = {
 
 var ShowWeatherComponent = props => (
   <div>
-    {(props.isLoading && <Loading/>) || <WeatherData weatherData={props.weatherData}/>}
+    {(props.isLoading && <Loading cityState={props.cityState}/>) || <WeatherData cityState={props.cityState} weatherData={props.weatherData}/>}
   </div>
 );
 

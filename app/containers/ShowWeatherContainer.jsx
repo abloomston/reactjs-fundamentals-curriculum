@@ -7,6 +7,7 @@ var ShowWeatherContainer = React.createClass({
 
   getInitialState: function() {
     return {
+      cityState: '',
       isLoading: true,
       weatherData: {}
     };
@@ -24,6 +25,7 @@ var ShowWeatherContainer = React.createClass({
 
   loadNewWeather: function(cityState) {
     this.setState({
+      cityState: cityState,
       isLoading: true,
       weatherData: {}
     });
@@ -39,7 +41,7 @@ var ShowWeatherContainer = React.createClass({
 	render: function() {
 		return (
 			<ShowWeatherComponent
-              cityState={this.props.routeParams.cityState}
+              cityState={this.state.cityState}
               isLoading={this.state.isLoading}
               weatherData={this.state.weatherData}
       />
