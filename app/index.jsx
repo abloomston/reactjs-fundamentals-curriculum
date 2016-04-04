@@ -12,6 +12,8 @@ var Main = require('./components/Main.jsx');
 var Home = require('./components/Home.jsx');
 var ShowWeatherContainer = require('./containers/ShowWeatherContainer.jsx');
 
+import './styles/index.jsx';
+
 var Routes = props => (
 	<Router history={history}>
 		<Route path='/' component={Main}>
