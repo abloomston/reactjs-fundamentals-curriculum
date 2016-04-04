@@ -1,6 +1,4 @@
-var React = require('react');
-
-var PropTypes = React.PropTypes;
+import React from 'react';
 
 var GetWeatherComponent = props => (
 	<form onSubmit={props.onSubmitLocation}>
@@ -14,10 +12,10 @@ var GetWeatherComponent = props => (
 );
 
 GetWeatherComponent.propTypes = {
-  placeholder: PropTypes.string,
-	location: PropTypes.string.isRequired,
-	onSubmitLocation: PropTypes.func.isRequired,
-	onUpdateLocation: PropTypes.func.isRequired
+  placeholder: React.PropTypes.string,
+	location: React.PropTypes.string.isRequired,
+	onSubmitLocation: React.PropTypes.func.isRequired,
+	onUpdateLocation: React.PropTypes.func.isRequired
 };
 
 module.exports = GetWeatherComponent;

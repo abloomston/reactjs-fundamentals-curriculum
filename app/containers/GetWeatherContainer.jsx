@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var GetWeatherComponent = require('../components/GetWeatherComponent.jsx');
+import GetWeatherComponent from '../components/GetWeatherComponent.jsx';
 
 var GetWeatherContainer = React.createClass({
 

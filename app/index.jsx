@@ -1,21 +1,15 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactRouter = require('react-router');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var IndexRoute = ReactRouter.IndexRoute;
-
-var history = ReactRouter.hashHistory;
-
-var Main = require('./components/Main.jsx');
-var Home = require('./components/Home.jsx');
-var ShowWeatherContainer = require('./containers/ShowWeatherContainer.jsx');
+import Main from './components/Main.jsx';
+import Home from './components/Home.jsx';
+import ShowWeatherContainer from './containers/ShowWeatherContainer.jsx';
 
 import './styles/index.jsx';
 
 var Routes = props => (
-	<Router history={history}>
+	<Router history={hashHistory}>
 		<Route path='/' component={Main}>
 		  <IndexRoute component={Home}/>
       <Route path='/weather/:cityState' component={ShowWeatherContainer}/>

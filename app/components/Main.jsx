@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var GetWeatherContainer = require('../containers/GetWeatherContainer.jsx');
+import GetWeatherContainer from '../containers/GetWeatherContainer.jsx';
 
 var Main = props => (
 	<div>

@@ -1,4 +1,4 @@
-var axios = require('axios');
+import axios from 'axios';
 
 const baseURL = 'http://api.openweathermap.org/data/2.5';
 const api_key = OPEN_WEATHER_API_KEY; // set as env variable before running webpack

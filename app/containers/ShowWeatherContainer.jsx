@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var ShowWeatherComponent = require('../components/ShowWeatherComponent.jsx');
-var weatherHelpers = require('../utils/weatherHelpers.jsx');
+import ShowWeatherComponent from '../components/ShowWeatherComponent.jsx';
+import WeatherHelpers from '../utils/weatherHelpers.jsx';
 
 var ShowWeatherContainer = React.createClass({
 
@@ -29,7 +29,7 @@ var ShowWeatherContainer = React.createClass({
       isLoading: true,
       weatherData: {}
     });
-    weatherHelpers.getWeatherData(cityState)
+    WeatherHelpers.getWeatherData(cityState)
                   .then(function (weatherData) {
                     this.setState({
                       isLoading: false,

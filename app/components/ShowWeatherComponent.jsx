@@ -1,6 +1,4 @@
-var React = require('react');
-
-var PropTypes = React.PropTypes;
+import React from 'react';
 
 var Loading = props => (
   <p>Loading</p>
@@ -28,7 +26,7 @@ var WeatherData = props => (
 );
 
 WeatherData.propTypes = {
-  weatherData: PropTypes.object.isRequired
+  weatherData: React.PropTypes.object.isRequired
 };
 
 var ShowWeatherComponent = props => (
@@ -38,9 +36,9 @@ var ShowWeatherComponent = props => (
 );
 
 ShowWeatherComponent.propTypes = {
-  cityState: PropTypes.string.isRequired,
-  isLoading: PropTypes.bool.isRequired,
-  weatherData: PropTypes.object.isRequired
+  cityState: React.PropTypes.string.isRequired,
+  isLoading: React.PropTypes.bool.isRequired,
+  weatherData: React.PropTypes.object.isRequired
 };
 
 module.exports = ShowWeatherComponent;
