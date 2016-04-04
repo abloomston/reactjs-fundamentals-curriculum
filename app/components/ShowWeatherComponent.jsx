@@ -1,27 +1,28 @@
 import React from 'react';
+import {Grid, Row, Col} from 'react-bootstrap';
 
 var Loading = props => (
-  <p>Loading</p>
+  <h1>Loading</h1>
 );
 
 var WeatherDataDay = props => (
   <div>
-    {props.data.dt}<br/>
-    {props.data.weather.map(weather =>
-      <div key={weather.id}>
-        {weather.main}<br/>
-        {weather.description}<br/>
-      </div>
-     )}
+    <h2>{props.data.dt}</h2>
+    {props.data.weather[0].icon}<br/>
+    {props.data.weather[0].description}<br/>
   </div>
 );
 
 var WeatherData = props => (
   <div>
-    <h3>{props.cityState}</h3>
-    <ul>
-      {props.weatherData.list.map(data => <li key={data.dt}><WeatherDataDay data={data}/></li>)}
-    </ul>
+    <h1>{props.cityState}</h1>
+    <Grid fluid>
+      <Row>
+        {props.weatherData.list.map(data =>
+          <Col sm={6} md={4} key={data.dt}><WeatherDataDay data={data}/></Col>
+         )}
+      </Row>
+    </Grid>
   </div>
 );
 

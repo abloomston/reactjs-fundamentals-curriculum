@@ -1,13 +1,11 @@
 import React from 'react';
+import {Grid, Row, Col, ButtonInput, Input} from 'react-bootstrap';
 
 var GetWeatherComponent = props => (
 	<form onSubmit={props.onSubmitLocation}>
-		<div className="form-group">
-			<input className="form-control" placeholder={props.placeholder || ""} type="text" onChange={props.onUpdateLocation} value={props.location}/>
-		</div>
-		<div className="form-group">
-			<button className="btn btn-block btn-success" type="submit">Continue</button>
-		</div>
+		<Input type="text" placeholder={props.placeholder || ""} onChange={props.onUpdateLocation} value={props.location}/>
+    {'  '}
+		<ButtonInput type="submit" bsStyle="success" value="Continue"/>
 	</form>
 );
 
