@@ -13,16 +13,28 @@ var ShowWeatherContainer = React.createClass({
   },
 
   componentDidMount: function() {
-    weatherHelpers.getWeatherData(this.props.routeParams.cityState)
-      .then(function (weatherData) {
-        this.setState({
-          isLoading: false,
-          weatherData: weatherData
-        });
-      }.bind(this));
+    this.loadNewWeather(this.props.routeParams.cityState);
   },
 
-  /* TODO- entering new city, state second time doesn't trigger refresh of data here.. */
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps.routeParams.cityState != this.props.routeParams.cityState) {
+      this.loadNewWeather(nextProps.routeParams.cityState);
+    }
+  },
+
+  loadNewWeather: function(cityState) {
+    this.setState({
+      isLoading: true,
+      weatherData: {}
+    });
+    weatherHelpers.getWeatherData(cityState)
+                  .then(function (weatherData) {
+                    this.setState({
+                      isLoading: false,
+                      weatherData: weatherData
+                    });
+                  }.bind(this));
+  },
 
 	render: function() {
 		return (
