@@ -10,11 +10,11 @@ var WeatherDataDay = props => (
   <div>
     {props.data.dt}<br/>
     {props.data.weather.map(weather =>
-    <div>
-      {weather.main}<br/>
-      {weather.description}<br/>
-    </div>
-    )}
+      <div key={weather.id}>
+        {weather.main}<br/>
+        {weather.description}<br/>
+      </div>
+     )}
   </div>
 );
 
@@ -22,7 +22,7 @@ var WeatherData = props => (
   <div>
     <h3>{props.weatherData.city.name}, {props.weatherData.city.country}</h3>
     <ul>
-      {props.weatherData.list.map(data => <li><WeatherDataDay data={data}/></li>)}
+      {props.weatherData.list.map(data => <li key={data.dt}><WeatherDataDay data={data}/></li>)}
     </ul>
   </div>
 );
