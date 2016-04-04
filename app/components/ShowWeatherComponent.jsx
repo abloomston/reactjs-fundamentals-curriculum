@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 var Loading = props => (
   <h1>Loading</h1>
@@ -7,9 +7,9 @@ var Loading = props => (
 
 var WeatherDataDay = props => (
   <div>
+    <Image style={{height: '130px'}}
+        alt={props.data.weather[0].description} src={require(`../images/weather-icons/${props.data.weather[0].icon}.svg`)}/>
     <h2>{props.data.dt}</h2>
-    {props.data.weather[0].icon}<br/>
-    {props.data.weather[0].description}<br/>
   </div>
 );
 
