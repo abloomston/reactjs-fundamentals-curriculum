@@ -1,0 +1,8 @@
+.root {
+  background-size: cover;
+  background: url(../images/pattern.svg);
+}
+
+.root h1, .root h2, .root h3 {
+  color: white;
+}

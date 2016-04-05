@@ -20,9 +20,9 @@ var Main = props => (
 			  <GetWeatherContainer/>
       </Navbar.Form>
     </Navbar>
-    <Grid fluid className={styles.main}>
+    <div className={styles.main}>
 		  {props.children}
-    </Grid>
+    </div>
 	</div>
 );
 
