@@ -2,6 +2,82 @@
 }
 
 .main {
-  background-size: cover !important;
-  background: url(../images/pattern.svg) !important;
+  background-size: cover;
+  background: url(../images/pattern.svg);
+}
+
+/*
+ * 1. http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
+ * 2. s/.navbar-default/.nav/
+ * 3. s/.nav /.nav :global/
+ */
+
+.nav :global {
+  background-color: #fc6c43;
+  border-color: #e8633e;
+}
+.nav :global .navbar-brand {
+  color: #ecf0f1;
+}
+.nav :global .navbar-brand:hover,
+.nav :global .navbar-brand:focus {
+  color: #ffffff;
+}
+.nav :global .navbar-text {
+  color: #ecf0f1;
+}
+.nav :global .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.nav :global .navbar-nav > li > a:hover,
+.nav :global .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.nav :global .navbar-nav > .active > a,
+.nav :global .navbar-nav > .active > a:hover,
+.nav :global .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #e8633e;
+}
+.nav :global .navbar-nav > .open > a,
+.nav :global .navbar-nav > .open > a:hover,
+.nav :global .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #e8633e;
+}
+.nav :global .navbar-toggle {
+  border-color: #e8633e;
+}
+.nav :global .navbar-toggle:hover,
+.nav :global .navbar-toggle:focus {
+  background-color: #e8633e;
+}
+.nav :global .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.nav :global .navbar-collapse,
+.nav :global .navbar-form {
+  border-color: #ecf0f1;
+}
+.nav :global .navbar-link {
+  color: #ecf0f1;
+}
+.nav :global .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .nav :global .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .nav :global .navbar-nav .open .dropdown-menu > li > a:hover,
+  .nav :global .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .nav :global .navbar-nav .open .dropdown-menu > .active > a,
+  .nav :global .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .nav :global .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #e8633e;
+  }
 }
