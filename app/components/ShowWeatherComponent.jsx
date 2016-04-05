@@ -5,25 +5,23 @@ import moment from 'moment';
 import styles from '../styles/ShowWeatherComponent.css';
 
 var ShowWeatherComponent = props => (
-  <div>
-    <Grid fluid className={styles.root}>
-      <Row>
-        <Col xs={12}>
-          <h1>{props.isLoading ? 'Loading' : props.cityState}</h1>
+  <Grid fluid className={styles.root}>
+    <Row>
+      <Col xs={12}>
+        <h1>{props.isLoading ? 'Loading' : props.cityState}</h1>
+      </Col>
+    </Row>
+    <Row>
+      {props.isLoading ? [] : props.weatherData.list.map(data =>
+        <Col sm={6} md={4} key={data.dt}>
+          <Image style={{height: '130px'}}
+                 alt={data.weather[0].description}
+                 src={require(`../images/weather-icons/${data.weather[0].icon}.svg`)}/>
+          <h2>{moment.unix(data.dt).format('dddd, MMM D')}</h2>
         </Col>
-      </Row>
-      <Row>
-        {props.isLoading ? [] : props.weatherData.list.map(data =>
-          <Col sm={6} md={4} key={data.dt}>
-            <Image style={{height: '130px'}}
-                   alt={data.weather[0].description}
-                   src={require(`../images/weather-icons/${data.weather[0].icon}.svg`)}/>
-            <h2>{moment.unix(data.dt).format('dddd, MMM D')}</h2>
-          </Col>
-         )}
-      </Row>
-    </Grid>
-  </div>
+       )}
+    </Row>
+  </Grid>
 );
 
 ShowWeatherComponent.propTypes = {
