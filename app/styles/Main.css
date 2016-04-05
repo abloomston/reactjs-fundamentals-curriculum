@@ -16,6 +16,7 @@
  * 1. http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
  * 2. s/.navbar-default/.nav/
  * 3. s/.nav /.nav :global/
+ * 4. Change border-color for navbar-form to #e8633e
  */
 
 .nav :global {
@@ -63,7 +64,7 @@
 }
 .nav :global .navbar-collapse,
 .nav :global .navbar-form {
-  border-color: #ecf0f1;
+  border-color: #e8633e;
 }
 .nav :global .navbar-link {
   color: #ecf0f1;
