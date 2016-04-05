@@ -5,6 +5,9 @@ import GetWeatherContainer from '../containers/GetWeatherContainer.jsx';
 
 import styles from '../styles/Home.css';
 
+/* TODO cleaner horizontal centering */
+/* TODO vertical centering, cf http://stackoverflow.com/questions/22196587/how-to-center-align-vertically-the-container-in-bootstrap */
+
 var Home = props => (
 	<Grid fluid className={styles.root}>
     <Row>
