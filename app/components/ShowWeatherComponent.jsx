@@ -1,6 +1,8 @@
 import React from 'react';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 
+import styles from '../styles/ShowWeatherComponent.css';
+
 var Loading = props => (
   <h1>Loading</h1>
 );
@@ -14,16 +16,18 @@ var WeatherDataDay = props => (
 );
 
 var WeatherData = props => (
-  <div>
-    <h1>{props.cityState}</h1>
-    <Grid fluid>
-      <Row>
-        {props.weatherData.list.map(data =>
-          <Col sm={6} md={4} key={data.dt}><WeatherDataDay data={data}/></Col>
-         )}
-      </Row>
-    </Grid>
-  </div>
+  <Grid fluid className={styles.root}>
+    <Row>
+      <Col xs={12}>
+        <h1>{props.cityState}</h1>
+      </Col>
+    </Row>
+    <Row>
+      {props.weatherData.list.map(data =>
+        <Col sm={6} md={4} key={data.dt}><WeatherDataDay data={data}/></Col>
+       )}
+    </Row>
+  </Grid>
 );
 
 WeatherData.propTypes = {
