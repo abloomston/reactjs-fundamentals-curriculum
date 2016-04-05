@@ -1,5 +1,10 @@
 .root {
   height: 100%;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.root h1, .root h2, .root h3, .root h4, .root h5 {
+  font-weight: 100;
 }
 
 .main {
