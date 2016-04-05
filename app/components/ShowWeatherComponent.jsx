@@ -4,6 +4,14 @@ import moment from 'moment';
 
 import styles from '../styles/ShowWeatherComponent.css';
 
+/* TODO: support for clicking a date to get detailed weather forcast for that date */
+/* TODO: automatic offsets of Cols so that e.g. at lg viewport we see the following
+   if we have five days of weather data to display:
+
+   X X X
+   X   X
+ */
+
 var ShowWeatherComponent = props => (
   <Grid fluid className={styles.root}>
     <Row>

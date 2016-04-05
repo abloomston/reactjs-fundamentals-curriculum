@@ -1,0 +1,76 @@
+/*
+ * 1. http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
+ * 2. s/.navbar-default/.nav/
+ * 3. s/.root /.root :global/
+ * 4. Change border-color for navbar-form to #e8633e
+ */
+
+.root :global {
+  background-color: #fc6c43;
+  border-color: #e8633e;
+}
+.root :global .navbar-brand {
+  color: #ecf0f1;
+}
+.root :global .navbar-brand:hover,
+.root :global .navbar-brand:focus {
+  color: #ffffff;
+}
+.root :global .navbar-text {
+  color: #ecf0f1;
+}
+.root :global .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.root :global .navbar-nav > li > a:hover,
+.root :global .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.root :global .navbar-nav > .active > a,
+.root :global .navbar-nav > .active > a:hover,
+.root :global .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #e8633e;
+}
+.root :global .navbar-nav > .open > a,
+.root :global .navbar-nav > .open > a:hover,
+.root :global .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #e8633e;
+}
+.root :global .navbar-toggle {
+  border-color: #e8633e;
+}
+.root :global .navbar-toggle:hover,
+.root :global .navbar-toggle:focus {
+  background-color: #e8633e;
+}
+.root :global .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.root :global .navbar-collapse,
+.root :global .navbar-form {
+  border-color: #e8633e;
+}
+.root :global .navbar-link {
+  color: #ecf0f1;
+}
+.root :global .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .root :global .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .root :global .navbar-nav .open .dropdown-menu > li > a:hover,
+  .root :global .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .root :global .navbar-nav .open .dropdown-menu > .active > a,
+  .root :global .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .root :global .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #e8633e;
+  }
+}
