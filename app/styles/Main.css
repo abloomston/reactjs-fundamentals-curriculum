@@ -1,0 +1,7 @@
+.root {
+}
+
+.main {
+  background-size: cover !important;
+  background: url(../images/pattern.svg) !important;
+}
