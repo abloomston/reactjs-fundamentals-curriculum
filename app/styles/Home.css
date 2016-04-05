@@ -2,6 +2,7 @@
   background-size: cover;
   background: url(../images/pattern.svg);
   height: 100%;
+  text-align: center;
 }
 
 .header {
