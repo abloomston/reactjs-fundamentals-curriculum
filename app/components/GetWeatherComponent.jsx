@@ -3,9 +3,9 @@ import {Grid, Row, Col, ButtonInput, Input} from 'react-bootstrap';
 
 var GetWeatherComponent = props => (
 	<form onSubmit={props.onSubmitLocation}>
-		<Input type="text" placeholder={props.placeholder || ""} onChange={props.onUpdateLocation} value={props.location}/>
-    {'  '}
-		<ButtonInput type="submit" bsStyle="success" value="Continue"/>
+		<Input type="text" placeholder={props.placeholder || ""} onChange={props.onUpdateLocation} value={props.location}
+		  buttonAfter={<ButtonInput type="submit" bsStyle="success" value="Continue"/>}
+    />
 	</form>
 );
 

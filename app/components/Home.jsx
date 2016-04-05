@@ -13,7 +13,7 @@ var Home = props => (
       </Col>
     </Row>
     <Row>
-      <Col xs={6} xsOffset={3} sm={6} smOffset={3} md={4} mdOffset={4} lg={2} lgOffset={5}>
+      <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={4} lg={4} lgOffset={4}>
 		    <GetWeatherContainer/>
       </Col>
     </Row>
