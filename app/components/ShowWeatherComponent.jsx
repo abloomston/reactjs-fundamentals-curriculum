@@ -5,7 +5,13 @@ import moment from 'moment';
 import styles from '../styles/ShowWeatherComponent.css';
 
 var Loading = props => (
-  <h1>Loading</h1>
+  <Grid fluid className={styles.root}>
+    <Row>
+      <Col xs={12}>
+        <h1>Loading</h1>
+      </Col>
+    </Row>
+  </Grid>
 );
 
 var WeatherDataDay = props => (
