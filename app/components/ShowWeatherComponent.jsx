@@ -4,14 +4,6 @@ import moment from 'moment';
 
 import styles from '../styles/ShowWeatherComponent.css';
 
-var WeatherDataDay = props => (
-  <div>
-    <Image style={{height: '130px'}}
-        alt={props.data.weather[0].description} src={require(`../images/weather-icons/${props.data.weather[0].icon}.svg`)}/>
-    <h2>{moment.unix(props.data.dt).format('dddd, MMM D')}</h2>
-  </div>
-);
-
 var ShowWeatherComponent = props => (
   <div>
     <Grid fluid className={styles.root}>
@@ -22,7 +14,12 @@ var ShowWeatherComponent = props => (
       </Row>
       <Row>
         {props.isLoading ? [] : props.weatherData.list.map(data =>
-          <Col sm={6} md={4} key={data.dt}><WeatherDataDay data={data}/></Col>
+          <Col sm={6} md={4} key={data.dt}>
+            <Image style={{height: '130px'}}
+                   alt={data.weather[0].description}
+                   src={require(`../images/weather-icons/${data.weather[0].icon}.svg`)}/>
+            <h2>{moment.unix(data.dt).format('dddd, MMM D')}</h2>
+          </Col>
          )}
       </Row>
     </Grid>
