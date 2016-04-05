@@ -1,6 +1,7 @@
 .root {
   background-size: cover;
   background: url(../images/pattern.svg);
+  height: 100%;
 }
 
 .root h1, .root h2, .root h3 {
