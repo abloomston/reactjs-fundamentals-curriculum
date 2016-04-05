@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, Nav, Navbar} from 'react-bootstrap';
-import bUtils from 'react-bootstrap/lib/utils/bootstrapUtils'
+import bUtils from 'react-bootstrap/lib/utils/bootstrapUtils';
 import {IndexLinkContainer} from 'react-router-bootstrap';
 
 import GetWeatherContainer from '../containers/GetWeatherContainer.jsx';
