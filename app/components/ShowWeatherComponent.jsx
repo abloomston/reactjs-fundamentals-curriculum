@@ -4,16 +4,6 @@ import moment from 'moment';
 
 import styles from '../styles/ShowWeatherComponent.css';
 
-var Loading = props => (
-  <Grid fluid className={styles.root}>
-    <Row>
-      <Col xs={12}>
-        <h1>Loading</h1>
-      </Col>
-    </Row>
-  </Grid>
-);
-
 var WeatherDataDay = props => (
   <div>
     <Image style={{height: '130px'}}
@@ -22,28 +12,20 @@ var WeatherDataDay = props => (
   </div>
 );
 
-var WeatherData = props => (
-  <Grid fluid className={styles.root}>
-    <Row>
-      <Col xs={12}>
-        <h1>{props.cityState}</h1>
-      </Col>
-    </Row>
-    <Row>
-      {props.weatherData.list.map(data =>
-        <Col sm={6} md={4} key={data.dt}><WeatherDataDay data={data}/></Col>
-       )}
-    </Row>
-  </Grid>
-);
-
-WeatherData.propTypes = {
-  weatherData: React.PropTypes.object.isRequired
-};
-
 var ShowWeatherComponent = props => (
   <div>
-    {(props.isLoading && <Loading cityState={props.cityState}/>) || <WeatherData cityState={props.cityState} weatherData={props.weatherData}/>}
+    <Grid fluid className={styles.root}>
+      <Row>
+        <Col xs={12}>
+          <h1>{props.isLoading ? 'Loading' : props.cityState}</h1>
+        </Col>
+      </Row>
+      <Row>
+        {props.isLoading ? [] : props.weatherData.list.map(data =>
+          <Col sm={6} md={4} key={data.dt}><WeatherDataDay data={data}/></Col>
+         )}
+      </Row>
+    </Grid>
   </div>
 );
 
