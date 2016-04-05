@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
+import moment from 'moment';
 
 import styles from '../styles/ShowWeatherComponent.css';
 
@@ -11,7 +12,7 @@ var WeatherDataDay = props => (
   <div>
     <Image style={{height: '130px'}}
         alt={props.data.weather[0].description} src={require(`../images/weather-icons/${props.data.weather[0].icon}.svg`)}/>
-    <h2>{props.data.dt}</h2>
+    <h2>{moment.unix(props.data.dt).format('dddd, MMM D')}</h2>
   </div>
 );
 
