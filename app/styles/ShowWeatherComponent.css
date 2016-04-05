@@ -1,3 +1,7 @@
 .root {
   text-align: center;
 }
+
+.weatherImage {
+  height: 130px;
+}

@@ -14,7 +14,7 @@ var ShowWeatherComponent = props => (
     <Row>
       {props.isLoading ? [] : props.weatherData.list.map(data =>
         <Col sm={6} md={4} key={data.dt}>
-          <Image style={{height: '130px'}}
+          <Image className={styles.weatherImage}
                  alt={data.weather[0].description}
                  src={require(`../images/weather-icons/${data.weather[0].icon}.svg`)}/>
           <h2>{moment.unix(data.dt).format('dddd, MMM D')}</h2>
