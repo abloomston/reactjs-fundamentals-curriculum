@@ -5,8 +5,12 @@ import styles from '../styles/Main.css';
 
 var Main = props => (
   <div className={styles.root}>
-    <NavBar/>
-		{props.children}
+    <div className={styles.nav}>
+      <NavBar/>
+    </div>
+    <div className={styles.main}>
+		  {props.children}
+    </div>
 	</div>
 );
 

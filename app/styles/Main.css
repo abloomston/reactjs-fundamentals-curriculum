@@ -6,3 +6,24 @@
 .root h1, .root h2, .root h3, .root h4, .root h5 {
   font-weight: 100;
 }
+
+.nav {
+}
+
+/* calculated height below accounts for navbar so that child elements can center elements vertically */
+
+.main {
+  /* 50px ~ navbar height */
+  height: -moz-calc(100% - 50px);
+  height: -webkit-calc(100% - 50px);
+  height: calc(100% - 50px);
+}
+
+@media (max-width: 768px) {
+  .main {
+    /* 125px ~ navbar height */
+    height: -moz-calc(100% - 125px);
+    height: -webkit-calc(100% - 125px);
+    height: calc(100% - 125px);
+  }
+}
